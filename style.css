@@ -122,6 +122,7 @@ header {
   padding-inline: 1rem;
   font-size: inherit;
   font-weight: bold;
+  border-radius: 0.3rem;
 }
 
 header::before {
@@ -134,4 +135,43 @@ header::before {
   background-color: rgba(0, 0, 0, 0.5);
   pointer-events: none;
   z-index: -1;
+}
+
+main {
+  .text-asset-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-inline: 15rem;
+    gap: 1rem;
+    align-items: center;
+
+    .text-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      h2 {
+        font-size: 3rem;
+        font-weight: 800;
+      }
+
+      p {
+        font-size: 1.5rem;
+      }
+    }
+
+    .asset-container {
+      position: relative;
+
+      img {
+        z-index: 1;
+        width: 100%;
+      }
+
+      video {
+        position: absolute;
+        z-index: -1;
+      }
+    }
+  }
 }
