@@ -142,7 +142,7 @@ main {
     position: relative;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin-inline: 15rem;
+    padding: 5rem 15rem;
     gap: 1rem;
     align-items: center;
 
@@ -242,9 +242,57 @@ main {
   .text-asset-container::before {
     content: "";
     position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 1rem;
-    color: red;
+    left: 0;
+    right: 0;
+    bottom: 0rem;
+    height: 0.5rem;
+    background-color: rgb(35, 35, 35);
+  }
+
+  section:last-child {
+    position: relative;
+    padding: 5rem 15rem;
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+      font-size: 3rem;
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    details {
+      background-color: rgb(45, 45, 45);
+      padding: 2rem;
+      margin-bottom: 0.5rem;
+      width: 100%;
+      font-size: 1.5rem;
+      transition: 0.2s ease-in-out;
+    }
+
+    summary {
+      cursor: pointer;
+    }
+
+    details[open] {
+      p {
+        margin-top: 1rem;
+      }
+    }
+
+    details:hover {
+      background-color: rgb(65, 65, 65);
+    }
+  }
+
+  section:last-child::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0rem;
+    height: 0.5rem;
+    background-color: rgb(35, 35, 35);
   }
 }
